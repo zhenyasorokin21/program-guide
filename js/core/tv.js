@@ -1,9 +1,6 @@
 /*
  * TV Simulator '99
- * @Author: zshall 
- * @Date: 2017-05-02 22:34:58 
- * @Last Modified by: zshall
- * @Last Modified time: 2017-05-03 00:31:21
+ * @Author: zshall
  */
 
  class TV {

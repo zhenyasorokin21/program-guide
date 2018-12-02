@@ -5,11 +5,9 @@
 @font-face {
   font-family: VCR;
   src: url(fonts/VCR_OSD.ttf); }
-
 @font-face {
   font-family: PrevueGrid;
   src: url(fonts/PrevueGrid.ttf); }
-
 /* colors */
 /* REGULAR SCANLINES SETTINGS */
 /* MOVING SCANLINE SETTINGS */
@@ -43,11 +41,9 @@
 @keyframes scanline {
   0% {
     transform: translate3d(0, 200000%, 0); } }
-
 @keyframes scanlines {
   0% {
     background-position: 0 50%; } }
-
 /**
  * TV Simulator '99
  * Zach Hall, 2017
@@ -129,7 +125,6 @@ body {
   top: 128;
   width: 450;
   height: 360; }
-
 .tv .screen #ch-12 .video-left {
   background: #000033;
   position: absolute;
@@ -141,7 +136,6 @@ body {
   .tv .screen #ch-12 .video-left p {
     padding-left: 50px;
     line-height: 1.8; }
-
 .tv .screen #ch-12 .guide-container {
   position: absolute;
   bottom: 100;
@@ -189,3 +183,5 @@ body {
         -webkit-text-stroke: 0;
         float: right;
         vertical-align: middle; }
+
+/*# sourceMappingURL=site.css.map */
