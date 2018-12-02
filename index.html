@@ -47,8 +47,27 @@
     <script src="js/core/tv.js"></script>
 
     <script>
-        var tv = new TV();
+        const _global_params = getUrlParams(window.location.search);
+        var tv = new TV({
+            maxWidth: parseInt(_global_params['maxWidth'] || 1200),
+            maxHeight: parseInt(_global_params['maxHeight'] || 1000),
+            warmupTime: parseInt(_global_params['warmupTime'] || 3000),
+            firstStart: Boolean(_global_params['firstStart'] || false),
+            frameless: Boolean(_global_params['frameless'] || false)
+        });
         tv.startUp();
+
+
+        function getUrlParams(search) {
+            let hashes = search.slice(search.indexOf('?') + 1).split('&')
+            let params = {}
+            hashes.map(hash => {
+                let [key, val] = hash.split('=')
+                params[key] = decodeURIComponent(val)
+            })
+        
+            return params
+        }
     </script>
 
     <script>

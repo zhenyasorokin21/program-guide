@@ -7,11 +7,11 @@
  */
 
  class TV {
-    constructor(maxWidth = 1200, maxHeight = 1000, warmupTime = 3000, firstStart = true) {
-        this.maxWidth = maxWidth;
-        this.maxHeight = maxHeight;
-        this.warmupTime = warmupTime;
-        this.firstStart = firstStart;
+    constructor(options) {
+        this.maxWidth = options.maxWidth;
+        this.maxHeight = options.maxHeight;
+        this.warmupTime = options.warmupTime;
+        this.firstStart = options.firstStart;
         this.classes = {
             Channel12
         };
