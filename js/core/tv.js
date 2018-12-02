@@ -12,6 +12,7 @@
         this.maxHeight = options.maxHeight;
         this.warmupTime = options.warmupTime;
         this.firstStart = options.firstStart;
+        this.frameless = options.frameless;
         this.classes = {
             Channel12
         };
@@ -23,21 +24,27 @@
                 $(window).resize(() => {
                     this.handleResize();
                 });
-                $('.screen').addClass('scanlines');
+                if (!this.frameless) {
+                    $('.screen').addClass('scanlines');
+                }
             }
         
             this.handleResize();
             
-            // about
-            $('#about-button').click(() => {
+            if (!this.frameless) {
+                // about
+                $('#about-button').click(() => {
+                    $('.about').toggle();
+                })
                 $('.about').toggle();
-            })
-            $('.about').toggle();
-        
-            // other TV buttons
-            $('#tv-mute').click(() => {
-                this.toggleMute();
-            });
+            
+                // other TV buttons
+                $('#tv-mute').click(() => {
+                    this.toggleMute();
+                });
+            } else {
+                $('.tv-mask, #about-button, #tv-mute, .about').hide();
+            }
             
             document.addEventListener('youtubeReady',() => {
                 // initialize listings grid
